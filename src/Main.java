@@ -3,7 +3,9 @@
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Ingrese su nombre");
+        Estudiante estudiante = new Estudiante("Ana", "Ingeniería en informática", 20);
+
+        estudiante.mostrarInformacion();
 
     }
 }
