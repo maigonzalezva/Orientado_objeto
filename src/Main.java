@@ -4,30 +4,25 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Ingrese su nombre: ");
-        String nombre = scanner.nextLine();
+        int opcion = -1;
 
-        System.out.println("Ingrese su carrera: ");
-        String carrera = scanner.nextLine();
+        while (opcion !=0) {
 
-        System.out.println("Ingrese su edad: ");
-        int edad = scanner.nextInt();
+            System.out.println("=== SISTEMA DUOC ===");
+            System.out.println("1. Mostrar estado");
+            System.out.println("2. Procesar operación");
+            System.out.println("0. Salir");
 
-        Estudiante estudiante = new Estudiante(nombre, carrera, edad);
+            System.out.print("Seleccione una opción: ");
+            opcion = scanner.nextInt();
 
-        estudiante.mostrarInformacion();
-
-        if (edad < 18) {
-            System.out.println("Estudiante menor de edad.");
-        } else if (edad < 25) {
-            System.out.println("Estudiante joven.");
-        } else {
-            System.out.println("Estudiante adulto.");
+            if (opcion == 1) {
+                System.out.println("Sistema operativo.");
+            } else if (opcion == 2) {
+                System.out.println("Procesando operación...");
+            } else if (opcion == 0) {
+                System.out.println("Cerrando sistema...");
+            }
         }
-
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("Procesando estudiante " + i);
-        }
-
     }
 }
